@@ -45,6 +45,9 @@
             android:layout_height="wrap_content"
             android:hint="Enter amount:" />
 
+
+
+
         <EditText
             android:id="@+id/AddNote"
             android:layout_width="match_parent"

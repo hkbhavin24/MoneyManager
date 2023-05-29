@@ -24,9 +24,13 @@ class HomeFragment : Fragment() {
         database = Database(context)
         binding = FragmentHomeBinding.inflate(layoutInflater)
 
+
+
         list = database.showData()
         adapter = UserDataAdapter(list)
+        fragfragment(IncomeFragment())
         runfragment()
+
         binding.btnAdd.setOnClickListener {
             onincome()
         }
@@ -69,7 +73,6 @@ class HomeFragment : Fragment() {
         var list = ArrayList<UserModel>()
 
         fun updated() {
-
             list.clear()
             list = database.showData()
             adapter.update(list)

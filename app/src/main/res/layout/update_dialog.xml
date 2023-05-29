@@ -35,12 +35,17 @@
             android:layout_height="wrap_content"
             android:hint="Enter amount:" />
 
+        <EditText
+            android:id="@+id/category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="category:" />
 
         <EditText
             android:id="@+id/note"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Remark:" />
+            android:hint="Note:" />
 
         <Button
             android:id="@+id/btnUpdate"

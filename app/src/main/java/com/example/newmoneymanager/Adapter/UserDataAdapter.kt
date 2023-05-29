@@ -8,9 +8,12 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.newmoneymanager.ChildFragment.IncomeFragment
 import com.example.newmoneymanager.Database.Database
 import com.example.newmoneymanager.ModelClass.UserModel
+import com.example.newmoneymanager.ParentFragment.CatagoryFragment
 import com.example.newmoneymanager.ParentFragment.HomeFragment
+import com.example.newmoneymanager.ParentFragment.TransactionFragment
 import com.example.newmoneymanager.R
 
 class UserDataAdapter(list: ArrayList<UserModel>) :
@@ -68,6 +71,7 @@ class UserDataAdapter(list: ArrayList<UserModel>) :
                     edtnote.text.toString()
                 )
                 HomeFragment.updated()
+                TransactionFragment.updated()
                 dialog.dismiss()
             }
             dialog.show()
@@ -75,6 +79,8 @@ class UserDataAdapter(list: ArrayList<UserModel>) :
         holder.btnDelete.setOnClickListener {
             database.deleteData(modellist.get(position).id)
             HomeFragment.updated()
+            TransactionFragment.updated()
+            IncomeFragment.updated()
         }
 //        var total = 0;
 //
